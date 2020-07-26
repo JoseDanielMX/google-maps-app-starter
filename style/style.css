@@ -13,6 +13,42 @@ body {
     width: 100%;
 }
 
+.search {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+.search i {
+    color: whitesmoke;
+    font-size: 25px;
+}
+
+.search-container {
+    background-color: #454E53;
+    border-radius: 30px;
+    display: flex;
+    height: 60px;
+    left: 100px;
+    position: absolute;
+    top: 230px;
+    width: 400px;
+    z-index: 100;
+}
+
+.search-container input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    flex-grow: 1;
+    font-size: 25px;
+}
+
+.search-container input:focus {
+    outline: none;
+}
+
 .title {
     color: #333;
     font-size: 80px;
