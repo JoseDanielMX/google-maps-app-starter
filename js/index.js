@@ -15,6 +15,7 @@ function initMap() {
   });
   infoWindow = new google.maps.InfoWindow();
   displayStores();
+  setOnClickListener();
   showStoreMarkers();
 }
 
@@ -74,4 +75,13 @@ function createMarker(latlng, name, address, index) {
     infoWindow.open(map, marker);
   });
   markers.push(marker);
+}
+
+function setOnClickListener() {
+  var storeElements = document.querySelectorAll('.store-container');
+  storeElements.forEach(function(elem, index) {
+    elem.addEventListener('click', function() {
+      new google.maps.event.trigger(markers[index], 'click');
+    })
+  })
 }
