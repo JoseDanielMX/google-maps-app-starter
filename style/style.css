@@ -73,13 +73,16 @@ body {
 }
 
 .stores-list {
+    flex-grow: 1;
     padding: 0 20px;
+    overflow-y: scroll;
 }
 
 .store-list-container {
     background-color: white;
     border-radius: 30px;
     bottom: 20px;
+    display: flex;
     left: 100px;
     position: absolute;
     top: 320px;
