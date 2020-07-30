@@ -65,8 +65,15 @@ body {
 }
 
 .store-container-background {
+    border-radius: 18px;
     display: flex;
-    padding: 0 5px;
+    margin: 12px 0;
+    padding: 0 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.store-container-background:hover {
+    background-color: #ccc;
 }
 
 .store-info-container {
