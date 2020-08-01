@@ -110,3 +110,11 @@ function clearLocations() {
   }
   markers.length = 0;
 }
+
+function toggleVisibility(id) {
+  var toggle = document.getElementById(id);
+  if(toggle.style.display == 'flex')
+     toggle.style.display = 'none';
+  else
+     toggle.style.display = 'flex';
+}

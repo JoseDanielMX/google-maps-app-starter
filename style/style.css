@@ -1,6 +1,8 @@
+/***** BASE STYLE *****/
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
+    height: 89vh;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -12,6 +14,25 @@ body {
     position: relative;
     width: 100%;
 }
+    
+/***** HEADER *****/
+
+.logo {
+    display: none;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+    display: flex;
+    grid-column: 1 / -1;
+    justify-content: center;
+    padding: 16px 24px;
+}
 
 .search {
     align-items: center;
@@ -22,19 +43,18 @@ body {
 
 .search i {
     color: whitesmoke;
-    font-size: 25px;
+    font-size: 16px;
 }
 
 .search-container {
+    align-items: center;
     background-color: #454E53;
     border-radius: 30px;
     display: flex;
-    height: 60px;
-    left: 100px;
-    position: absolute;
-    top: 230px;
-    width: 400px;
-    z-index: 100;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    width: 265px;
 }
 
 .search-container input {
@@ -42,90 +62,109 @@ body {
     border: none;
     color: white;
     flex-grow: 1;
-    font-size: 25px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .search-container input:focus {
     outline: none;
 }
 
-.store-address {
-    color: #514C4C;
-    font-size: 21px;
-    margin-top: 30px;
+/***** TABLET *****/
+
+@media (min-width: 640px) {
+
+    /***** HEADER *****/
+    
+    .logo {
+        align-items: center;
+        display: flex;
+    }
+
+    .menu {
+        justify-content: space-between;
+        margin: 0;
+    }
 }
 
-.store-address span {
-    display: block;
-}
+/***** DESKTOP *****/
 
-.store-container {
-    border-bottom: 1px solid #979797;
-    cursor: pointer;
-}
+@media (min-width: 1024px) {
+    
+    /***** HEADER *****/
 
-.store-container-background {
-    border-radius: 18px;
-    display: flex;
-    margin: 12px 0;
-    padding: 0 8px;
-    transition: all 0.2s ease-in-out;
-}
 
-.store-container-background:hover {
-    background-color: #ccc;
-}
 
-.store-info-container {
-    flex-grow: 1;
-}
+    /***** STORE CONTAINER *****/
 
-.stores-list {
-    flex-grow: 1;
-    padding: 0 20px;
-    overflow-y: scroll;
-}
+    .store-address {
+        color: #514C4C;
+        font-size: 21px;
+        margin-top: 30px;
+    }
+    
+    .store-address span {
+        display: block;
+    }
+    
+    .store-container {
+        border-bottom: 1px solid #979797;
+        cursor: pointer;
+    }
+    
+    .store-container-background {
+        border-radius: 18px;
+        display: flex;
+        margin: 12px 0;
+        padding: 0 8px;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .store-container-background:hover {
+        background-color: #ccc;
+    }
+    
+    .store-info-container {
+        flex-grow: 1;
+    }
+    
+    .stores-list {
+        flex-grow: 1;
+        padding: 0 20px;
+        overflow-y: scroll;
+    }
+    
+    #store-list-container {
+        background-color: white;
+        border-radius: 30px;
+        bottom: 20px;
+        display: none;
+        left: 100px;
+        position: absolute;
+        top: 320px;
+        width: 400px;
+        z-index: 100;
+    }
+    
+    .store-number {
+        align-items: center;
+        background-color: #454E53;
+        border-radius: 50%;
+        color: #B5ADAD;
+        display: flex;
+        height: 30px;
+        justify-content: center;
+        width: 30px;
+    }
+    
+    .store-number-container {
+        align-items: center;
+        display: flex;
+    }
+    
+    .store-phone-number {
+        color: #85ADAD;
+        margin: 15px 0;
+    }
 
-.store-list-container {
-    background-color: white;
-    border-radius: 30px;
-    bottom: 20px;
-    display: flex;
-    left: 100px;
-    position: absolute;
-    top: 320px;
-    width: 400px;
-    z-index: 100;
-}
-
-.store-number {
-    align-items: center;
-    background-color: #454E53;
-    border-radius: 50%;
-    color: #B5ADAD;
-    display: flex;
-    height: 30px;
-    justify-content: center;
-    width: 30px;
-}
-
-.store-number-container {
-    align-items: center;
-    display: flex;
-}
-
-.store-phone-number {
-    color: #85ADAD;
-    margin: 15px 0;
-}
-
-.title {
-    color: #333;
-    font-size: 80px;
-    font-weight: bold;
-    left: 100px;
-    position: absolute;
-    text-transform: uppercase;
-    top: 100px;
-    z-index: 100;
 }

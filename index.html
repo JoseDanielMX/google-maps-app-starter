@@ -6,16 +6,18 @@
         <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
     </head>
     <body>
-        <div class="title">
-            Store Locator
-        </div>
-        <div class="search-container">
-            <div class="search">
-                <input id="zip-code-input" type="text" placeholder="Enter zip">
-                <i class="fas fa-search" onclick="searchStores()"></i>
+        <header class="menu">
+            <h1 class="logo">
+                Store Locator
+            </h1>
+            <div class="search-container">
+                <div class="search">
+                    <input id="zip-code-input" type="text" placeholder="Enter zip code" onclick="toggleVisibility('store-list-container');">
+                    <i class="fas fa-search" onclick="searchStores()"></i>
+                </div>
             </div>
-        </div>
-        <div class="store-list-container">
+        </header>
+        <div id="store-list-container">
             <div class="stores-list">
                 <div class="store-container">
                     <div class="store-container-background">
