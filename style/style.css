@@ -2,7 +2,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    height: 89vh;
+    height: 100vh;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -29,9 +29,13 @@ body {
     background-color: white;
     box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
     display: flex;
-    grid-column: 1 / -1;
     justify-content: center;
+    left: 0;
     padding: 16px 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
 }
 
 .search {
@@ -70,6 +74,97 @@ body {
     outline: none;
 }
 
+.store-address {
+    color: #514C4C;
+    font-size: 21px;
+    margin-top: 30px;
+}
+
+.store-address span {
+    display: block;
+}
+
+.store-container {
+    border-bottom: 1px solid #979797;
+    cursor: pointer;
+}
+
+.store-container-background {
+    border-radius: 18px;
+    display: flex;
+    margin: 12px 0;
+    padding: 0 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.store-container-background:hover {
+    background-color: #ccc;
+}
+
+.store-info-container {
+    flex-grow: 1;
+}
+
+.stores-list {
+    flex-grow: 1;
+    padding: 0 20px;
+    overflow-y: scroll;
+}
+
+#store-list-container {
+    background-color: white;
+    border-radius: 30px;
+    bottom: 20px;
+    display: none;
+    left: 100px;
+    position: absolute;
+    top: 320px;
+    width: 400px;
+    z-index: 100;
+}
+
+.store-number {
+    align-items: center;
+    background-color: #454E53;
+    border-radius: 50%;
+    color: #B5ADAD;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    width: 30px;
+}
+
+.store-number-container {
+    align-items: center;
+    display: flex;
+}
+
+.store-phone-number {
+    color: #85ADAD;
+    margin: 15px 0;
+}
+
+/***** FOOTER *****/
+
+footer {
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    bottom: 0;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: absolute;   
+    text-align: center;
+    width: 30%;
+    z-index: 100;
+    left: 0;
+    right: 0;    
+}
+
+footer h1 {
+    font-size: 18px;
+}
+
 /***** TABLET *****/
 
 @media (min-width: 640px) {
@@ -85,6 +180,12 @@ body {
         justify-content: space-between;
         margin: 0;
     }
+
+    /***** FOOTER *****/
+
+    footer {
+        display: none;
+    }
 }
 
 /***** DESKTOP *****/
@@ -93,78 +194,6 @@ body {
     
     /***** HEADER *****/
 
-
-
-    /***** STORE CONTAINER *****/
-
-    .store-address {
-        color: #514C4C;
-        font-size: 21px;
-        margin-top: 30px;
-    }
     
-    .store-address span {
-        display: block;
-    }
-    
-    .store-container {
-        border-bottom: 1px solid #979797;
-        cursor: pointer;
-    }
-    
-    .store-container-background {
-        border-radius: 18px;
-        display: flex;
-        margin: 12px 0;
-        padding: 0 8px;
-        transition: all 0.2s ease-in-out;
-    }
-    
-    .store-container-background:hover {
-        background-color: #ccc;
-    }
-    
-    .store-info-container {
-        flex-grow: 1;
-    }
-    
-    .stores-list {
-        flex-grow: 1;
-        padding: 0 20px;
-        overflow-y: scroll;
-    }
-    
-    #store-list-container {
-        background-color: white;
-        border-radius: 30px;
-        bottom: 20px;
-        display: none;
-        left: 100px;
-        position: absolute;
-        top: 320px;
-        width: 400px;
-        z-index: 100;
-    }
-    
-    .store-number {
-        align-items: center;
-        background-color: #454E53;
-        border-radius: 50%;
-        color: #B5ADAD;
-        display: flex;
-        height: 30px;
-        justify-content: center;
-        width: 30px;
-    }
-    
-    .store-number-container {
-        align-items: center;
-        display: flex;
-    }
-    
-    .store-phone-number {
-        color: #85ADAD;
-        margin: 15px 0;
-    }
 
 }
