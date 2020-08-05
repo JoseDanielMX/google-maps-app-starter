@@ -74,6 +74,8 @@ body {
     outline: none;
 }
 
+/***** STORE LIST CONTAINER *****/
+
 .store-address {
     color: #514C4C;
     font-size: 21px;
@@ -92,13 +94,13 @@ body {
 .store-container-background {
     border-radius: 18px;
     display: flex;
-    margin: 12px 0;
+    margin: 8px 0 12px;
     padding: 0 8px;
     transition: all 0.2s ease-in-out;
 }
 
 .store-container-background:hover {
-    background-color: #ccc;
+    background-color: rgb(230, 228, 228);
 }
 
 .store-info-container {
@@ -107,27 +109,39 @@ body {
 
 .stores-list {
     flex-grow: 1;
+    -ms-overflow-style: none;
     padding: 0 20px;
     overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.stores-list::-webkit-scrollbar {
+    display: none;
 }
 
 #store-list-container {
     background-color: white;
-    border-radius: 30px;
-    bottom: 20px;
+    border-radius: 20px;
+    bottom: 180px;
     display: none;
-    left: 100px;
+    opacity: 0.5;
     position: absolute;
-    top: 320px;
+    right: 10px;
+    top: 150px;
+    transition: all 0.5s ease-in-out;
     width: 400px;
     z-index: 100;
+}
+
+#store-list-container:hover {
+    opacity: 1;
 }
 
 .store-number {
     align-items: center;
     background-color: #454E53;
     border-radius: 50%;
-    color: #B5ADAD;
+    color: white;
     display: flex;
     height: 30px;
     justify-content: center;
@@ -140,7 +154,6 @@ body {
 }
 
 .store-phone-number {
-    color: #85ADAD;
     margin: 15px 0;
 }
 
