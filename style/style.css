@@ -129,7 +129,7 @@ body {
     right: 10px;
     top: 150px;
     transition: all 0.5s ease-in-out;
-    width: 400px;
+    width: 300px;
     z-index: 100;
 }
 
@@ -194,19 +194,15 @@ footer h1 {
         margin: 0;
     }
 
+    /***** STORE LIST CONTAINER *****/
+    
+    #store-list-container {
+        width: 400px;
+    }
+
     /***** FOOTER *****/
 
     footer {
         display: none;
     }
-}
-
-/***** DESKTOP *****/
-
-@media (min-width: 1024px) {
-    
-    /***** HEADER *****/
-
-    
-
 }
